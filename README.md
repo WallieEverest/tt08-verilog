@@ -1,41 +1,30 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
+## How it works
 
-# Tiny Tapeout Verilog Project Template
+ChipTune implements an 8-bit Programmable Sound Generator (PSG).
+Input is from a serial UART interface.
+Output is PWM audio.
 
-- [Read the documentation for project](docs/info.md)
+# Overview
+This project replicates the Audio Processing Unit (APU) of vintage video games.
 
-## What is Tiny Tapeout?
+# Statistics
+- Tiles: 1x2
+- DFF: 458
+- Total Cells: 2760
+- Utilization: 72%
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
+# TinyTapeout 8 Configuration
+TT08 devices from the eFabless Multi-Project Wafer (MPW) shuttle are delivered in QFN-64 packages, mounted on a daughterboard for breakout.
 
-To learn more and get started, visit https://tinytapeout.com.
+Changes:
+1.) Static registers addressed by the serial UART have been connected to the external reset, providing a known startup.
+2.) Default values for REG signals have been removed, allowing 'X' propagation during simulation until the design reaches steady state.
 
-## Set up your Verilog project
+## How to test
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
+The ChipTune project can be interfaced to a computer COM port (9600,n,8,1).
+An analog PWM filter and audio driver are needed for the test rig.
 
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+## External Hardware
 
-## Enable GitHub actions to build the results page
-
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
-
-## Resources
-
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-- [Build your design locally](https://www.tinytapeout.com/guides/local-hardening/)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
+Computer COM port

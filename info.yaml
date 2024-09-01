@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "ChipTune"      # Project title
+  author:       "Wallace Everest"      # Your name
+  discord:      "morningjava"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Vintage 8-bit sound generator"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     1789773       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -13,9 +13,7 @@ project:
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_example"
 
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:
     - "project.v"
 
@@ -24,7 +22,7 @@ pinout:
   # Inputs
   ui[0]: ""
   ui[1]: ""
-  ui[2]: ""
+  ui[2]: "RX"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -32,14 +30,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "Blink"
+  uo[1]: "Link"
+  uo[2]: "TX"
+  uo[3]: "PWM"
+  uo[4]: "Square1"
+  uo[5]: "Square2"
+  uo[6]: "Triangle"
+  uo[7]: "Noise"
 
   # Bidirectional pins
   uio[0]: ""
