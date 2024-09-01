@@ -1,4 +1,4 @@
-## How it works
+# How it works
 
 ChipTune implements an 8-bit Programmable Sound Generator (PSG).
 Input is from a serial UART interface.
@@ -20,11 +20,11 @@ Changes:
 1.) Static registers addressed by the serial UART have been connected to the external reset, providing a known startup.
 2.) Default values for REG signals have been removed, allowing 'X' propagation during simulation until the design reaches steady state.
 
-## How to test
+# How to test
 
 The ChipTune project can be interfaced to a computer COM port (9600,n,8,1).
 An analog PWM filter and audio driver are needed for the test rig.
 
-## External Hardware
+# External Hardware
 
 Computer COM port
