@@ -1,15 +1,11 @@
-# How it works
+## How it works
 
-ChipTune implements an 8-bit Programmable Sound Generator (PSG).
-Input is from a serial UART interface.
-Output is PWM audio.
+A cascade of NMOS and capacitors perfomr a delay line.
 
-# How to test
+## How to test
 
-The ChipTune project can be interfaced to a computer COM port (9600,n,8,1).
-An analog PWM filter and audio driver are needed for the test rig.
+A two-phase non-overlapping clock is applied to DIN_0 and DIN_1.
 
-# External hardware
-
-Computer COM port
-
+## External hardware
+A 1Vpp audio signal is applied to UA_0.
+A summing amplifier is connected to analog outputs UA_1 and UA_2.

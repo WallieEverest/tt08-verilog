@@ -1,5 +1,5 @@
 # Overview
-This project replicates the Audio Processing Unit (APU) of vintage video games.
+Bucket Brigade - Analog Delay
 
 # Statistics
 - Tiles: 1x2
